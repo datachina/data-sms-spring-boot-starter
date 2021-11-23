@@ -1,0 +1,41 @@
+{
+  "groups": [
+    {
+      "name": "data.sms.aliyun",
+      "type": "com.data.sms.properties.AliyunSmsProperties",
+      "sourceType": "com.data.sms.properties.AliyunSmsPropertiess"
+    }
+  ],
+  "hints": [
+    {
+      "name": "data.sms.aliyun.domain",
+      "values": [
+        {
+          "value": "dysmsapi.aliyuncs.com",
+          "description": "默认值."
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "data.sms.aliyun.accessKeyId",
+      "type": "java.lang.String",
+      "sourceType": "com.data.sms.properties.AliyunSmsProperties",
+      "description": "阿里云短信中心accessKeyId."
+    },
+    {
+      "name": "data.sms.aliyun.accessKeySecret",
+      "type": "java.lang.String",
+      "sourceType": "com.data.sms.properties.AliyunSmsProperties",
+      "description": "阿里云短信中心accessKeySecret."
+    },
+    {
+      "name": "data.sms.aliyun.domain",
+      "type": "java.lang.String",
+      "sourceType": "com.data.sms.properties.AliyunSmsProperties",
+      "description": "阿里云短信中心域名.",
+      "defaultValue": "dysmsapi.aliyuncs.com"
+    }
+  ]
+}
