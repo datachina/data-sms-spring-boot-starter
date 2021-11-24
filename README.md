@@ -36,7 +36,6 @@
 </repositories>
 ```
 #### gradle
-
 ```gradle
 allprojects {
     repositories {
@@ -47,6 +46,7 @@ allprojects {
 
 2. 添加依赖(查看徽标确定最新版)
 
+#### maven
 ```xml
 <dependency>
     <groupId>com.gitee.jidaojiuyou</groupId>
@@ -55,21 +55,44 @@ allprojects {
 </dependency>
 ```
 
+#### gradle
 ```gradle
 implementation 'com.gitee.jidaojiuyou:data-sms-spring-boot-starter:最新版'
 ```
+3. 自行加入阿里云的SDK
 
-3. 注入`AliyunSmsUtils`或`AliyunSmsClient`使用
+#### maven
+```xml
+<dependency>
+    <groupId>com.aliyun</groupId>
+    <artifactId>dysmsapi20170525</artifactId>
+    <version>2.0.7</version>
+</dependency>
+```
 
---- 
+#### gradle
+```gradle
+implementation 'com.aliyun:dysmsapi20170525:2.0.7'
+```
 
-> 异常情况: 如果导入不了依赖,请检查自己的maven代理仓库(比如阿里云仓库)的mirrorOf标签的值是否为*
+4. 注入`AliyunSmsUtils`或`AliyunSmsClient`使用
+
+---
+> **注意:** 如果导入不了依赖,请检查自己的maven代理仓库(比如阿里云仓库)的mirrorOf标签的值是否为*
 > 
 > 请将其改为`<mirrorOf>*,!jitpack.io</mirrorOf>`即可
-
+---
 ### 例子
 
 ```java
+import com.aliyun.dysmsapi20170525.models.QuerySendDetailsResponse;
+import com.aliyun.dysmsapi20170525.models.SendSmsRequest;
+import com.aliyun.dysmsapi20170525.models.SendSmsResponse;
+import com.data.sms.model.AliyunSmsClient;
+import com.data.sms.util.AliyunSmsUtils;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 public class TestController {
 
