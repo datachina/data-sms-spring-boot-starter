@@ -2,6 +2,7 @@ package com.data.sms.config;
 
 import com.aliyun.dysmsapi20170525.Client;
 import com.aliyun.teaopenapi.models.Config;
+import com.data.sms.model.AliyunSmsClient;
 import com.data.sms.properties.AliyunSmsProperties;
 import com.data.sms.util.AliyunSmsUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,12 +47,12 @@ public class AliyunSmsAutoConfiguration {
      * @throws Exception 异常
      */
     @Bean
-    public Client client() throws Exception {
+    public AliyunSmsClient client() throws Exception {
         // 注入配置
         Config config = new Config()
                 .setAccessKeyId(properties.getAccessKeyId())
                 .setAccessKeySecret(properties.getAccessKeySecret())
                 .setEndpoint(properties.getDomain());
-        return new Client(config);
+        return new AliyunSmsClient(config);
     }
 }

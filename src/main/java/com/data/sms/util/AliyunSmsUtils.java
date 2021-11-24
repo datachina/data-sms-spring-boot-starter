@@ -6,6 +6,7 @@ import com.aliyun.dysmsapi20170525.models.QuerySendDetailsResponse;
 import com.aliyun.dysmsapi20170525.models.SendSmsRequest;
 import com.aliyun.dysmsapi20170525.models.SendSmsResponse;
 import com.data.sms.listener.SendAliyunSmsListener;
+import com.data.sms.model.AliyunSmsClient;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -18,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class AliyunSmsUtils {
 
     @Autowired
-    private Client client;
+    private AliyunSmsClient client;
 
     /**
      * 使用阿里云短信SDK发送短信。<br>
