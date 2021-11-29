@@ -3,7 +3,12 @@
     {
       "name": "data.sms.aliyun",
       "type": "com.data.sms.properties.AliyunSmsProperties",
-      "sourceType": "com.data.sms.properties.AliyunSmsPropertiess"
+      "sourceType": "com.data.sms.properties.AliyunSmsProperties"
+    },
+    {
+      "name": "data.sms.tencent",
+      "type": "com.data.sms.properties.TencentSmsProperties",
+      "sourceType": "com.data.sms.properties.TencentSmsProperties"
     }
   ],
   "hints": [
@@ -12,6 +17,24 @@
       "values": [
         {
           "value": "dysmsapi.aliyuncs.com",
+          "description": "默认值."
+        }
+      ]
+    },
+    {
+      "name": "data.sms.tencent.domain",
+      "values": [
+        {
+          "value": "sms.tencentcloudapi.com",
+          "description": "默认值."
+        }
+      ]
+    },
+    {
+      "name": "data.sms.tencent.region",
+      "values": [
+        {
+          "value": "ap-guangzhou",
           "description": "默认值."
         }
       ]
@@ -36,6 +59,38 @@
       "sourceType": "com.data.sms.properties.AliyunSmsProperties",
       "description": "阿里云短信中心域名.",
       "defaultValue": "dysmsapi.aliyuncs.com"
+    },
+    {
+      "name": "data.sms.tencent.secretId",
+      "type": "java.lang.String",
+      "sourceType": "com.data.sms.properties.TencentSmsProperties",
+      "description": "腾讯云短信secretId."
+    },
+    {
+      "name": "data.sms.tencent.secretKey",
+      "type": "java.lang.String",
+      "sourceType": "com.data.sms.properties.TencentSmsProperties",
+      "description": "腾讯云短信secretKey."
+    },
+    {
+      "name": "data.sms.tencent.domain",
+      "type": "java.lang.String",
+      "sourceType": "com.data.sms.properties.TencentSmsProperties",
+      "description": "腾讯云短信域名.",
+      "defaultValue": "sms.tencentcloudapi.com"
+    },
+    {
+      "name": "data.sms.tencent.sdkAppId",
+      "type": "java.lang.String",
+      "sourceType": "com.data.sms.properties.TencentSmsProperties",
+      "description": "腾讯云短信AppId."
+    },
+    {
+      "name": "data.sms.tencent.region",
+      "type": "java.lang.String",
+      "sourceType": "com.data.sms.properties.TencentSmsProperties",
+      "description": "腾讯云短信地域信息.",
+      "defaultValue": "ap-guangzhou"
     }
   ]
 }

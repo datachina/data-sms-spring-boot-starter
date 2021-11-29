@@ -1,1 +1,3 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.data.sms.config.AliyunSmsAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.data.sms.config.AliyunSmsAutoConfiguration,\
+  com.data.sms.config.TencentSmsAutoConfiguration
