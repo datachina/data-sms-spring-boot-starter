@@ -12,7 +12,7 @@ public interface SendAliyunSmsListener {
     /**
      * 发送短信回调
      *
-     * @param sendSmsResponse 发送短信的回调
+     * @param response 发送短信的回调
      */
-    void onSendResp(SendSmsResponse sendSmsResponse);
+    void onSendResp(SendSmsResponse response);
 }

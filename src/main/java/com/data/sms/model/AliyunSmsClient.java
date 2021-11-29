@@ -4,7 +4,7 @@ import com.aliyun.dysmsapi20170525.Client;
 import com.aliyun.teaopenapi.models.Config;
 
 /**
- * 为了区分各家的Client,各家都叫Client,那还搞个毛啊
+ * 阿里云短信客户端
  *
  * @author jidaojiuyou
  * @since 2021/11/24

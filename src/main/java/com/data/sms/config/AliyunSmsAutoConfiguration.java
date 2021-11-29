@@ -1,6 +1,5 @@
 package com.data.sms.config;
 
-import com.aliyun.dysmsapi20170525.Client;
 import com.aliyun.teaopenapi.models.Config;
 import com.data.sms.model.AliyunSmsClient;
 import com.data.sms.properties.AliyunSmsProperties;
@@ -30,7 +29,7 @@ public class AliyunSmsAutoConfiguration {
     private AliyunSmsProperties properties;
 
     /**
-     * 注入配置
+     * 注入工具
      *
      * @return 阿里云短信工具
      */
@@ -47,7 +46,7 @@ public class AliyunSmsAutoConfiguration {
      * @throws Exception 异常
      */
     @Bean
-    public AliyunSmsClient client() throws Exception {
+    public AliyunSmsClient aliyunSmsClient() throws Exception {
         // 注入配置
         Config config = new Config()
                 .setAccessKeyId(properties.getAccessKeyId())
