@@ -99,6 +99,10 @@ implementation 'com.github.datachina:data-sms-spring-boot-starter:最新版'
 
 1. 配置短信中心提供的`sdkAppId`及用户`secretId`和`secretKey`。
 
+同样提供配置提示功能
+
+![提示功能](doc/img/tencent_tips.png)
+
 > 如何获取`secretId`和`secretKey`
 > 
 > 1. 登陆腾讯云管理中心控制台
